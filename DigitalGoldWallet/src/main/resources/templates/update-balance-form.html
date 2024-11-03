@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Form Registration</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1 {
+        text-align: center;
+        color: #0066cc;
+        margin-top: 30px;
+    }
+
+    .container {
+        width: 80%;
+        margin: 30px auto;
+        padding: 20px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 5px;
+        color: #007bff; /* Blue */
+    }
+
+    input[type="text"] {
+        width: calc(100% - 12px);
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #007bff; /* Blue */
+        border-radius: 4px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+
+    button[type="submit"] {
+        padding: 10px 20px;
+        background-color: #28a745; /* Green */
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+
+    button[type="submit"]:hover {
+        background-color: #218838; /* Darker green */
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Update Balance Of User</h1>
+    <form role="form" method="get" th:action="@{/api/update/balance}" th:object="${user}">
+        <label for="user_id">User Id:</label>
+        <input type="text" id="user_id" th:field="*{user_id}" required>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" th:field="*{email}" required>
+
+        <label for="name">Name:</label>
+        <input type="text" id="name" th:field="*{name}" required>
+
+        <label for="balance">Balance:</label>
+        <input type="text" id="balance" th:field="*{balance}" required>
+
+        <label for="created_at">Created At:</label>
+        <input type="text" id="created_at" th:field="*{created_at}" required>
+
+        <label for="address_id">Address Id:</label>
+        <input type="text" id="address_id" th:field="*{addresses.address_id}" required>
+
+        <label for="street">Street:</label>
+        <input type="text" id="street" th:field="*{addresses.street}" required>
+
+        <label for="city">City:</label>
+        <input type="text" id="city" th:field="*{addresses.city}" required>
+
+        <label for="state">State:</label>
+        <input type="text" id="state" th:field="*{addresses.state}" required>
+
+        <label for="postal_code">Postal Code:</label>
+        <input type="text" id="postal_code" th:field="*{addresses.postal_code}" required>
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" th:field="*{addresses.country}" required>
+
+        <button type="submit">Save</button>
+    </form>
+</div>
+</body>
+</html>

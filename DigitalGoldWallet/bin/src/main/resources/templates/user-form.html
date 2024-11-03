@@ -1,0 +1,192 @@
+<!--<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Retrieve by Driveid</title>
+<style type="text/css">
+	body{
+		background-color:#2c3e50;
+		color: white;
+		text-align: center;
+	}
+	form {
+		margin: 50px auto;
+		width: 50%; 
+	}
+	input[type="text"] {
+		padding: 10px;
+		width: 80%;
+		margin-bottom: 20px;
+	}
+	input[type="submit"] {
+		padding: 10px 20px;
+		background-color: #3498db;
+		color: white;
+		border: none;
+		cursor: pointer;
+	}
+</style>
+</head>
+<body>
+<h1>Retrive Deliverydriver details by id</h1>
+<form action="/api/driver/id" method="GET">
+<label for="id">Enter Id to retrive</label><br>
+<input type="text" id="driverId" name="id"><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>-->
+<!--<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Retrieve by Driver ID</title>
+<style type="text/css">
+        body {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+ 
+        h1 {
+            margin-top: 50px;
+        }
+ 
+        form {
+            margin: 50px auto;
+            width: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: box-shadow 0.3s ease;
+        }
+ 
+        form:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+ 
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+ 
+        input[type="text"] {
+            padding: 10px;
+            width: 80%;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.8);
+            transition: background-color 0.3s ease;
+        }
+ 
+        input[type="text"]:focus {
+            background-color: rgba(255, 255, 255, 1);
+        }
+ 
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+ 
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+</style>
+</head>
+<body>
+<h1>Retrieve Delivery Driver Details by ID</h1>
+<form action="/api/driver/id" method="GET">
+<label for="driverId">Enter Driver ID to Retrieve:</label><br>
+<input type="text" id="driverId" name="id"><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Retrieve by Users ID</title>
+<style type="text/css">
+    body {
+        background: linear-gradient(135deg, #56ccf2, #2f80ed); /* Gradient from Sky Blue to Royal Blue */
+        color: #333333; /* Dark Gray */
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        margin-top: 50px;
+        color: #ffffff; /* White */
+    }
+
+    .container {
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.9); /* White with transparency */
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease;
+    }
+
+    .container:hover {
+        transform: translateY(-5px);
+    }
+
+    label {
+        display: block;
+        margin-bottom: 15px;
+        font-size: 20px;
+        color: #ffffff; /* White */
+    }
+
+    input[type="text"] {
+        padding: 15px;
+        width: 80%;
+        margin-bottom: 30px;
+        border: none;
+        border-radius: 8px;
+        background-color: rgba(255, 255, 255, 0.8); /* White with transparency */
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+        background-color: rgba(255, 255, 255, 0.95); /* White with slight transparency */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* White shadow on focus */
+    }
+
+    input[type="submit"] {
+        padding: 15px 30px;
+        background-color: #ffffff; /* White */
+        color: #56ccf2; /* Sky Blue */
+        border: 2px solid #ffffff; /* White */
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #56ccf2; /* Sky Blue */
+        color: #ffffff; /* White */
+        transform: scale(1.05);
+    }
+</style>
+</head>
+<body>
+<h1>Retrieve User Details by ID</h1>
+<form action="/api/userss/id" method="GET">
+<label for="userId">Enteruser ID to Retrieve:</label><br>
+<input type="text" id="user_id" name="id"><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>

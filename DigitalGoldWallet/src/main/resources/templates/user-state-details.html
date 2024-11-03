@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>User Details</title>
+<style>
+		body {
+			font-family: Arial, sans-serif;
+			/* Change font to Arial or fallback to sans-serif */
+			background-color: #f2f2f2;
+			/* Light gray background color */
+			color: #333;
+			/* Dark text color */
+			margin: 0;
+			padding: 0;
+		}
+ 
+		h1 {
+			text-align: center;
+			/* Center align the heading */
+			color: #0066cc;
+			/* Blue heading color */
+			margin-top: 30px;
+			/* Add some top margin */
+		}
+ 
+		.container {
+			width: 80%;
+			/* Set width for the container */
+			margin: 30px auto;
+			/* Center the container horizontally */
+		}
+ 
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 20px;
+			/* Add some top margin to the table */
+			border: 2px solid #333;
+			/* Dark border with thickness */
+		}
+ 
+		th,
+		td {
+			padding: 10px;
+			text-align: left;
+			border: 1px solid #333;
+			/* Dark border for inner lines */
+		}
+ 
+		th {
+			background-color: #f2f2f2;
+			/* Light gray background for table header */
+			color: #333;
+			/* Dark text color */
+		}
+ 
+		tr:nth-child(even) {
+			background-color: #f9f9f9;
+			/* Alternate row background color */
+		}
+ 
+		.btn {
+			padding: 10px 20px;
+			background-color: #0066cc;
+			/* Blue button background color */
+			color: #fff;
+			/* White button text color */
+			border: none;
+			cursor: pointer;
+			margin-top: 20px;
+			/* Add some top margin to the button */
+		}
+ 
+		.btn:hover {
+			background-color: #004080;
+			/* Darker blue on hover */
+		}
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>User Details</h1>
+    <table>
+        <tr>
+            <th>User ID</th>
+            <th>Email</th>
+            <th>Name</th>
+            <th>Balance</th>
+            <th>Created At</th>
+            <th>Address ID</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>State</th>
+        </tr>
+        <tr th:each="user : ${user}">
+            <td th:text="${user.user_id}"></td>
+            <td th:text="${user.email}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.balance}"></td>
+            <td th:text="${user.created_at}"></td>
+            <td th:text="${user.addresses.address_id}"></td>
+            <td th:text="${user.addresses.street}"></td>
+            <td th:text="${user.addresses.city}"></td>
+            <td th:text="${user.addresses.state}"></td>
+        </tr>
+    </table>
+    <button class="btn" onclick="window.history.back()">Back to Previous Page</button>
+</div>
+</body>
+</html>
