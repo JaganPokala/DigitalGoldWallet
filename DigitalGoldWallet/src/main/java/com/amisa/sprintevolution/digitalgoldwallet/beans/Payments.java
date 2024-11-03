@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.time.LocalDateTime;
 
 import com.amisa.sprintevolution.digitalgoldwallet.enums.*;
-
+//payment class
 @Entity
 @Table(name = "payments")
 public class Payments {
